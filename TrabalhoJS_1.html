@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Trabalho 1 JS Daniel</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="trabalho.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+         <style>
+            .interface{
+                background-color: rgba(8, 7, 7, 0.842);
+                color: white;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                overflow:hidden;
+            }
+            .row{
+                text-align: center;
+                }
+            .col-sm-4-1{
+                color: black;
+                background-color:rgba(255, 255, 255, 0.87);
+                text-align: justify;
+                border-top: solid 1px;
+                border-right: solid 1px;
+                border-right: 10px;
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-bottom: 179px;
+                margin: 10px -3px 10px 10px;
+                display: block;
+                width: 33.33%;
+                float: left;
+                }
+            .col-sm-4-2{
+                color: black;
+                background-color:rgba(255, 255, 255, 0.87);
+                text-align: justify;
+                border-top: solid 1px;
+                border-right: solid 1px;
+                border-right: 10px;
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-bottom: 138px;
+                margin: 10px -3px 10px 4px;
+                display: block;
+                width: 33.33%;
+                float: left;
+
+                }
+
+            .col-sm-4-3{
+                color: black;
+                background-color:rgba(255, 255, 255, 0.87);
+                text-align: justify;
+                border-top: solid 1px;
+                border-right: solid 1px;
+                border-right: 10px;
+                box-sizing: border-box;
+                padding-left: 10px;
+                
+                margin: 10px -39px 10px 4px;
+                display: block;
+                width: 33.33%;
+                float: left;
+                }    
+
+            .botaoc{
+                background-color: rgb(63, 77, 201);
+                color: white;
+                float: left;
+                display: grid;
+                margin: 2px;
+                padding: 4px;
+                } 
+            .botaoc:hover{
+                background-color: #3115cf;
+                transition: background 1s;
+                }
+            .botaol{
+                background-color: rgba(172, 30, 30, 0.685);
+                color: white;
+                float: left;
+                display: grid;
+                margin: 2px;
+                padding: 4px;
+                } 
+            .botaol:hover{
+                background-color: #f10303;
+                transition: background 1s;
+                }  
+                                
+            </style>        
+        <div class="interface">
+
+            <div class="row">
+                <h1> Exercício Lista 1: 1 ao 15 <br/> <h4>Profº Daniel</h4></h1>
+                <p><h4> Aluno: Mateus Borges Rodrigues - 21026</h4></p>                
+                <div class="col-sm-4-1">
+                        <b>Exercício 01</b>
+                        <p><h5><b>Faça um programa que receba 2 números, calcule<br/> e mostre a subtração do primeiro número pelo segundo:</b></h5> </p>
+                        <p>
+                            Número 1 <input type="number" id="exerc01_n1" placeholder="Digite o N1"/>   
+                        </p>
+                        <p>
+                            Número 2 <input type="number" id="exerc01_n2" placeholder="Digite o N2"/>
+                        </p>
+                        <button onclick="exerc_01()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar01()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r1"></p></b>
+
+                        <br/><b>Exercício 04</b>
+                        <p><h5><b>Faça um programa que receba 2 notas, calcule e mostre a média ponderada dessas notas, considerando peso 2 para a primeira nota e peso 3 para segunda nota:</b></h5> </p>
+                        <p>
+                            Nota 1 <input type="number" id="exerc04_n1" placeholder="Digite a nota 1"/>   
+                        </p>
+                        <p>
+                            Nota 2 <input type="number" id="exerc04_n2" placeholder="Digite a nota 2"/>
+                        </p>
+                        <button onclick="exerc_04()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar04()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r4"></p></b>
+
+                        <br/><b>Exercício 07</b>
+                        <p><h5><b>Faça um programa que receba o peso de uma pessoa, calcule e mostre o novo peso se ela engordar 15% ou se ela emagrecer 20% sobre o peso digitado:</b></h5> </p>
+                        <p>
+                            Peso <input type="number" id="exerc07_n1" placeholder="Digite o peso"/>   
+                        </p>
+                        <button onclick="exerc_07()" class="botaoc"> <b>Calcular</b> </button>                       
+                        <p><button onclick="limpar07()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>                        
+                        <b><p id="r7_peso1"></p></b>
+                        <b><p id="r7_peso2"></p></b> 
+
+                        <br/><b>Exercício 10</b>
+                        <p><h5><b>Faça um programa que calcula a área de um quadrado:</b></h5> </p>
+                        <p>
+                            Lado <input type="number" id="exerc10_n1" placeholder="Digite o lado"/>   
+                        </p>
+                        <button onclick="exerc_10()" class="botaoc"> <b>Calcular</b> </button>                    
+                        <p><button onclick="limpar10()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r10"></p></b> 
+                        
+                        
+                        <br/><b>Exercício 13</b>
+                        <p><h5><b>Digite um número para calcular a tabuada:</b></h5> </p>
+                        <p><br/>
+                            Número <input type="number" id="n" placeholder="Digite o número"/>   
+                        </p>
+                        <button onclick=exerc_13() class="botaoc"> <b>Calcular</b> </button>    
+                        <button onclick="limpar13()" class="botaol"> <b>Limpar</b> </button>
+                        <b><br><label id="r13"></label></b>
+
+
+                </div>
+                <div class="col-sm-4-2" >
+                    <b>Exercício 02</b>
+                    <p><h5><b>Faça um programa que receba 3 números, calcule<br/> e mostre a multiplicação desses números:</b></h5> </p>
+                    <p>
+                        Número 1 <input type="number" id="exerc02_n1" placeholder="Digite o N1"/>   
+                    </p>
+                    <p>
+                        Número 2 <input type="number" id="exerc02_n2" placeholder="Digite o N2"/>
+                    </p>
+                    <p>
+                        Número 3 <input type="number" id="exerc02_n3" placeholder="Digite o N3"/>
+                    </p>                    
+                    <button onclick="exerc_02()" class="botaoc"> <b>Calcular</b> </button>
+                    <p><button onclick="limpar02()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                    <b><p id="r2"></p></b>
+
+                    <br/><b>Exercício 05</b>
+                    <p><h5><b>Faça um programa que receba o preço de um produto, calcule<br/> e mostre o novo preço com 10% de desconto:</b></h5> </p>
+                    <p>
+                        Preço do produto <input type="number" id="exerc05_n1" placeholder="Digite o preço"/>   
+                    </p>
+                    <button onclick="exerc_05()" class="botaoc"> <b>Calcular</b> </button>
+                    <p><button onclick="limpar05()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                    <b><p id="r5"></p></b>
+                    
+                    <br/><b>Exercício 08</b>
+                    <p><h5><b>Faça um programa que receba o peso de uma pessoa em kg, calcule e mostre o novo peso em gramas:</b></h5> </p>
+                    <p>
+                        Peso <input type="number" id="exerc08_n1" placeholder="Digite o peso"/>   
+                    </p>
+                    <button onclick="exerc_08()" class="botaoc"> <b>Calcular</b> </button>
+                    <p><button onclick="limpar08()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                    <b><p id="r8"></p></b>
+
+                    <br/><b>Exercício 11</b>
+                    <p><h5><b>Faça um programa que calcule e mostre a área de um losango:</b></h5> </p>
+                    <p>
+                        Diagonal maior <input type="number" id="exerc11_n1" placeholder="Digite a diagonal maior"/>   
+                    </p>
+                    <p>
+                        Diagonal menor <input type="number" id="exerc11_n2" placeholder="Digite a diagonal menor"/>
+                    </p>                   
+                    <button onclick="exerc_11()" class="botaoc"> <b>Calcular</b> </button>
+                    <p><button onclick="limpar11()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                    <b><p id="r11"></p></b>
+                    
+                    <br/><b>Exercício 14</b>
+                    <p><h5><b>Faça um programa que receba ano de nascimento e ano atual<br/> e mostre a idade da pessoa em anos,meses,dias e semanas:</b></h5> </p>
+                    <p>
+                        Ano de nascimento <input type="number" id="exerc14_n1" placeholder="AAAA"/>   
+                    </p>
+                    <p>
+                        Ano atual <input type="number" id="exerc14_n2" placeholder="AAAA"/>
+                    </p>                   
+                    <button onclick="exerc_14()" class="botaoc"> <b>Calcular</b> </button>
+                    <p><button onclick="limpar14()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>                     
+                    <b><p id="r14_a"></p></b>
+                    <b><p id="r14_m"></p></b>
+                    <b><p id="r14_d"></p></b>
+                    <b><p id="r14_s"></p></b>
+
+                </div>
+                <div class="col-sm-4-3" >
+
+                        <b>Exercício 03</b>
+                        <p><h5><b>Faça um programa que receba 2 números, calcule e mostre<br/> a divisão desses números:</b></h5> </p>
+                        <p>
+                            Número 1 <input type="number" id="exerc03_n1" placeholder="Digite o N1"/>   
+                        </p>
+                        <p>
+                            Número 2 <input type="number" id="exerc03_n2" placeholder="Digite o N2"/>
+                        </p>
+                        <button onclick="exerc_03()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar03()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r3"></p></b>
+
+                        <br/><b>Exercício 06</b>
+                        <p><h5><b>Faça um programa que receba o salário fixo de um funcionári-<br/>o e o total de vendas e mostre o valor de sua comissão(4%):</b></h5> </p>
+                        <p>
+                            Salário <input type="number" id="exerc06_n1" placeholder="Digite o salário fixo"/>   
+                        </p>
+                        <p>
+                            Total de vendas <input type="number" id="exerc06_n2" placeholder="Digite total de vendas"/>
+                        </p>
+                        <button onclick="exerc_06()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar06()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>                        
+                        <b><p id="r6"></p></b>
+                        <b><p id="r6_salario"></p></b>
+
+                        <br/><b>Exercício 09</b>
+                        <p><h5><b>Faça um programa que calcule e mostre a área de um trapézio:</b></h5> </p>
+                        <p>
+                            Base maior <input type="number" id="exerc09_n1" placeholder="Digite a base maior"/>   
+                        </p>
+                        <p>
+                            Base menor <input type="number" id="exerc09_n2" placeholder="Digite a base menor"/>
+                        </p>
+                        <p>
+                            Altura <input type="number" id="exerc09_n3" placeholder="Digite a altura"/>
+                        </p>                    
+                        <button onclick="exerc_09()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar09()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r9"></p></b>
+
+                        <br/><b>Exercício 12</b>
+                        <p><h5><b>Digite os salários para calcular a quantidade de<br/> salário(s) mínimo(s) a ser recebido:</b></h5> </p>
+                        <p>
+                            Salário mínimo <input type="number" id="salarioMinimo" placeholder="Digite o salário mínimo"/>   
+                        </p>
+                        <p>
+                            Salário do funcionário <input type="number" id="salarioFuncionario" placeholder="Salário do funcionário"/>
+                        </p>
+                        <button onclick="exerc_12()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar12()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>
+                        <b><p id="r12"></p></b>
+                        
+                        <br/><b>Exercício 15</b>
+                        <p><h5><b>João recebeu o salário e precisa pagar duas contas atrasada-<br/>s. Ele terá de pagar multa de 2% sobre cada conta. Faça<br/> um programa que calcule e mostre quanto restará do salário<br/> de João:</b></h5> </p>
+                        <p>
+                            Salário de João <input type="number" id="exerc15_n1" placeholder="Digite o salário"/>   
+                        </p>
+                        <p>
+                            Valor Conta 1<input type="number" id="exerc15_n2" placeholder="Conta 1"/>
+                        </p>
+                        <p>
+                            Valor Conta 2<input type="number" id="exerc15_n3" placeholder="Conta 2"/>
+                        </p>
+                        <button onclick="exerc_15()" class="botaoc"> <b>Calcular</b> </button>
+                        <p><button onclick="limpar15()" class="botaol"> <b>Limpar</b> </button></p><br/><br/>    
+                        <b><p id="r15"></p></b>
+
+                </div>
+        </div>
+    </body>
+</html>
